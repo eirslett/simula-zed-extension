@@ -1,0 +1,3 @@
+name = "Simula"
+grammar = "simula"
+path_suffixes = ["sim"]
