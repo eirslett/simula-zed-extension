@@ -1,9 +1,9 @@
 [package]
-name = "simula-extension"
+name = "simula"
 version = "0.0.1"
 edition = "2021"
 authors = ["Eirik Sletteberg <eiriksletteberg@gmail.com>"]
-repository = "https://github.com/your-name/simula-zed-extension"
+repository = "https://github.com/eirslett/simula-zed-extension"
 
 [lib]
 crate-type = ["cdylib"]
@@ -12,4 +12,4 @@ crate-type = ["cdylib"]
 zed_extension_api = "0.1.0"
 
 [workspace]
-members = ["simula-extension"]
+members = ["simula"]
