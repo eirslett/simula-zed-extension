@@ -1,5 +1,5 @@
 id = "simula"
-name = "Simula"
+name = "simula"
 version = "0.0.1"
 schema_version = 1
 authors = ["Eirik Sletteberg <eiriksletteberg@gmail.com>"]
