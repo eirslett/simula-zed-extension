@@ -17,17 +17,17 @@
 ] @punctuation.delimiter
 
 (string_literal) @string
-(character_literal) @character
+(character_literal) @string
 (number_literal) @number
+(boolean_literal) @boolean
 [
-    (boolean_literal)
     (none)
     (notext)
-] @constant.builtin
+] @constant
 
 [
     (this)
-] @variable.builtin
+] @variable
 
 [
     (text)
@@ -41,7 +41,7 @@
     (ref)
     (procedure)
     (label)
-] @type.builtin
+] @type
 
 [
     "<"
@@ -129,7 +129,7 @@
 ] @keyword
 
 (object_generator
-        name: (identifier) @class
+        name: (identifier) @type
 )
 (remote_identifier
           property: (identifier) @property
@@ -138,7 +138,7 @@
     name: (identifier) @variable
 )
 (ref_expression
-    class_name: (identifier) @class
+    class_name: (identifier) @type
 )
 
 ; The problem with annotating this, is that we cannot always
@@ -151,7 +151,7 @@
 (block
     class:
         (procedure_statement
-            procedure: (identifier) @class
+            procedure: (identifier) @function
         )
 )
 (value_assignment
@@ -164,7 +164,7 @@
     variable: (identifier) @variable
 )
 (when_clause
-    type: (identifier) @class
+    type: (identifier) @type
 )
 (variable_declaration
     name: (identifier) @variable
@@ -177,8 +177,8 @@
     parameter: (identifier) @variable
 )
 (class_declaration
-    class_name: (identifier) @class
-    base: (identifier) @class
+    class_name: (identifier) @function
+    base: (identifier) @function
     parameter: (identifier) @variable
 )
 (specification
@@ -189,7 +189,7 @@
 )
 (external_class_declaration
     (external_item
-    name: (identifier) @class)
+    name: (identifier) @function)
 )
 (external_procedure_declaration
     (external_item

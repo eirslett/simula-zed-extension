@@ -5,7 +5,9 @@ struct SimulaExtension {
 }
 
 impl zed::Extension for SimulaExtension {
-    // ...
+    fn new() -> Self {
+        Self {}
+    }
 }
 
 zed::register_extension!(SimulaExtension);

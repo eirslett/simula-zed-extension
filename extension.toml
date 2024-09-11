@@ -1,9 +1,9 @@
 id = "simula"
-name = "simula"
+name = "Simula"
+description = "Extension for Simula"
 version = "0.0.1"
 schema_version = 1
 authors = ["Eirik Sletteberg <eiriksletteberg@gmail.com>"]
-description = "Extension for Simula"
 repository = "https://github.com/eirslett/simula-zed-extension"
 
 [grammars.simula]
